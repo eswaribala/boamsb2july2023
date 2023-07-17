@@ -24,7 +24,7 @@ import lombok.NoArgsConstructor;
 public class Address {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id
-    @Column(name="Adderss_Id")
+    @Column(name="Address_Id")
 	private long addressId;
     @Column(name="Door_No",nullable = false, length = 5)
 	private String doorNo;
@@ -35,9 +35,9 @@ public class Address {
     @Column(name="Pincode")
 	private long pincode;
     
-	 @ManyToOne(fetch = FetchType.LAZY,cascade = CascadeType.MERGE)
-	 @JoinColumn(foreignKey = @ForeignKey(name = "Customer_Id"), 
-	 name = "Customer_Id")
+	@ManyToOne(fetch = FetchType.LAZY,cascade = CascadeType.MERGE)
+	@JoinColumn(foreignKey = @ForeignKey(name = "Customer_Id"), 
+	name = "Customer_Id")
 
     private Customer customer;
 }
