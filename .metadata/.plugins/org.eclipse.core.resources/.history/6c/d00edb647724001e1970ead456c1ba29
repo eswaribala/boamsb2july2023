@@ -1,0 +1,22 @@
+package com.boa.customerapi.models;
+
+import javax.persistence.Entity;
+import javax.persistence.Inheritance;
+import javax.persistence.InheritanceType;
+import javax.persistence.Table;
+
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Entity
+@Table(name="Individual")
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
+public class Individual {
+	
+	private Gender gender;
+	private LocalDate dob;
+
+}
