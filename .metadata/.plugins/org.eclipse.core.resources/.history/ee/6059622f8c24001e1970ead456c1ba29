@@ -78,7 +78,7 @@ public class IndividualController {
 
 	}
 	
-	@GetMapping({"/v1.0/firstname/{firstName}"})
+	@GetMapping({"/v1.0/firstname/{contactNo}"})
 	public ResponseEntity<ResponseWrapper> getAllIndividualByFirstName(@PathVariable("firstName") String firstName){
 		
 		List<Individual> individuals=this.individualService.getIndividualByFirstName(firstName);
