@@ -1,0 +1,30 @@
+package com.boa.customerapi.models;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Inheritance;
+import javax.persistence.InheritanceType;
+import javax.persistence.Table;
+
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Entity
+@Table(name="Address")
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
+public class Address {
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Id
+    @Column(name="Adderss_Id")
+	private long addressId;
+	private String doorNo;
+	private String streetName;
+	private String city;
+	private long pincode;
+}

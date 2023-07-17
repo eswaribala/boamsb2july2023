@@ -1,0 +1,19 @@
+package com.boa.customerapi.models;
+
+import javax.persistence.Entity;
+import javax.persistence.Inheritance;
+import javax.persistence.InheritanceType;
+import javax.persistence.Table;
+
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Entity
+@Table(name="Address")
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
+public class Address {
+
+}
