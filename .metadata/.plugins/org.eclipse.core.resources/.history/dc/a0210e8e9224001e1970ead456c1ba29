@@ -1,0 +1,8 @@
+package com.boa.customerapi.configurations;
+
+import org.springframework.context.annotation.Configuration;
+
+@Configuration
+public class WebApiConfig implements MVCConfigurer{
+
+}

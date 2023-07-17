@@ -1,0 +1,6 @@
+package com.boa.customerapi.configurations;
+
+@Configuration
+public class WebApiConfig {
+
+}
