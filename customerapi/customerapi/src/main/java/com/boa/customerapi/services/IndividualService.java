@@ -46,8 +46,8 @@ public class IndividualService {
 		return this.individualRepo.findByContactNo(contactNo);
 		
 	}
-	
-	private List<Individual> getIndividualByFirstName(String firstName){
+	//non primary key
+	public List<Individual> getIndividualByFirstName(String firstName){
 
     	CriteriaBuilder cb= entityManager.getCriteriaBuilder();
     	AbstractQuery<Individual> cq=cb.createQuery(Individual.class);
