@@ -15,6 +15,7 @@ import org.springframework.format.annotation.DateTimeFormat.ISO;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 
 @Entity
@@ -22,7 +23,8 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class Individual {
+@EqualsAndHashCode(callSuper = false)
+public class Individual extends Customer{
 	@Enumerated(EnumType.STRING)
 	@Column(name="Gender")
 	private Gender gender;
