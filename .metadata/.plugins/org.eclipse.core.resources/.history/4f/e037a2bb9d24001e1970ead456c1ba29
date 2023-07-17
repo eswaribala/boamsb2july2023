@@ -39,10 +39,6 @@ MALE,FEMALE,TRANSGENDER
 
 type Query{
 
-findAllIndividuals:[Individual]
-findIndividualById(customerId: Long): Individual
-findIndividualByFirstName(firstName: String): [Individual]
-findIndividualByContactNo(contactNo: Long): [Individual]
 
 
 }
