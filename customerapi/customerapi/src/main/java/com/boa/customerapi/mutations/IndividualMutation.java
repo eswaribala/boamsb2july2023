@@ -36,13 +36,13 @@ public class IndividualMutation implements GraphQLMutationResolver{
     	
     	
     }
-   public Individual updateIndividual(long contactNo, String email) {
+   public Individual updateIndividual(long customerId, String email) {
 	   
-	   return this.individualService.updateIndividualEmail(contactNo, email);
+	   return this.individualService.updateIndividualEmail(customerId, email);
    }
-    public boolean deleteIndividual(long contactNo) {
+    public boolean deleteIndividual(long customerId) {
     
-    	return this.individualService.deleteIndividual(contactNo);
+    	return this.individualService.deleteIndividual(customerId);
     }
     
 }

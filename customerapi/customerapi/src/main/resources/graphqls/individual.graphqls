@@ -70,8 +70,8 @@ lastName: String
 type Mutation{
 
 addIndividual(individualInput: IndividualInput):Individual
-updateIndividual(contactNo: Long, email: String): Individual
-deleteIndividual(contactNo: Long): Boolean
+updateIndividual(customerId: Long, email: String): Individual
+deleteIndividual(customerId: Long): Boolean
 
 }
 
