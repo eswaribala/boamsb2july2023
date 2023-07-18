@@ -12,11 +12,7 @@ import org.springframework.context.annotation.Configuration;
 
 @Configuration
 @EnableConfigurationProperties(VaultConfiguration.class)
-
 public class DbConfiguration {
-
-
-
     @Value("${db_url1}")
     private String dbUrl;
     @Value("${db_driver}")
@@ -38,6 +34,8 @@ public class DbConfiguration {
         System.out.println("Entering Given Env.....");
         System.out.println("User Name..."+vaultConfiguration.getUsername());
         System.out.println("Password..."+vaultConfiguration.getPassword());
+        //System.out.println("User Name..."+vaultConfiguration.getUsername1());
+        //System.out.println("Password..."+vaultConfiguration.getPassword1());
         dataSourceBuilder=DataSourceBuilder.create();
         dataSourceBuilder.url(dbUrl);
         dataSourceBuilder.username(vaultConfiguration.getUsername());
