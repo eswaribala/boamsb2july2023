@@ -1,0 +1,16 @@
+package com.boa.customerapi.queries;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
+import com.boa.customerapi.services.IndividualService;
+
+import graphql.kickstart.tools.GraphQLQueryResolver;
+
+@Component
+public class IndividualQuery implements GraphQLQueryResolver {
+	@Autowired
+	private IndividualService individualService;
+	
+
+}

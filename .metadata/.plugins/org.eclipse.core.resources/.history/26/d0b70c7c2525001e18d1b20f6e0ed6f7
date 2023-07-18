@@ -1,0 +1,6 @@
+package com.boa.customerapi.queries;
+
+@Component
+public class IndividualQuery {
+
+}
