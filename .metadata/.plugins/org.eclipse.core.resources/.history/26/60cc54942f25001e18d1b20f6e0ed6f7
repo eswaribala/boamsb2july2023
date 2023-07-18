@@ -1,0 +1,18 @@
+package com.boa.customerapi.vos;
+
+
+
+import com.boa.customerapi.models.FullName;
+
+public class IndividualInput {
+	
+	private long customerId;
+	
+	private FullName name;
+
+	private long contactNo;
+	
+	private String email;
+	
+	private String password;
+}

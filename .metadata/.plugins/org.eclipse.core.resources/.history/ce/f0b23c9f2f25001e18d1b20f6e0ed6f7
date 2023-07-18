@@ -1,0 +1,16 @@
+package com.boa.customerapi.vos;
+
+
+
+public class IndividualInput {
+	
+	private long customerId;
+	
+	private FullNameInput name;
+
+	private long contactNo;
+	
+	private String email;
+	
+	private String password;
+}

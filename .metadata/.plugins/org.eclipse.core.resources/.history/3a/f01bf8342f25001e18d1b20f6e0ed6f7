@@ -1,0 +1,6 @@
+package com.boa.customerapi.mutations;
+
+@Component
+public class IndividualMutation {
+
+}

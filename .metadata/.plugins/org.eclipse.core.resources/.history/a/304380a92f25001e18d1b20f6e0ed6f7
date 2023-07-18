@@ -1,0 +1,20 @@
+package com.boa.customerapi.vos;
+
+
+
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+public class IndividualInput {
+	
+	private long customerId;
+	
+	private FullNameInput name;
+
+	private long contactNo;
+	
+	private String email;
+	
+	private String password;
+}

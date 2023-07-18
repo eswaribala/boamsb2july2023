@@ -1,0 +1,8 @@
+package com.boa.customerapi.mutations;
+
+import org.springframework.stereotype.Component;
+
+@Component
+public class IndividualMutation implements GraphqlMutationResolver{
+
+}
