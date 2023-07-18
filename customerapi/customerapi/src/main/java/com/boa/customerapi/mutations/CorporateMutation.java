@@ -36,13 +36,13 @@ public class CorporateMutation implements GraphQLMutationResolver{
     	
     	
     }
-   public Corporate updateCorporate(long contactNo, String email) {
+   public Corporate updateCorporate(long customerId, String email) {
 	   
-	   return this.corporateService.updateCorporateEmail(contactNo, email);
+	   return this.corporateService.updateCorporateEmail(customerId, email);
    }
-    public boolean deleteCorporate(long contactNo) {
+    public boolean deleteCorporate(long customerId) {
     
-    	return this.corporateService.deleteCorporate(contactNo);
+    	return this.corporateService.deleteCorporate(customerId);
     }
     
 }
