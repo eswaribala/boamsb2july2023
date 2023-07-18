@@ -18,6 +18,9 @@ import org.springframework.web.bind.annotation.RestController;
 import com.boa.customerapi.models.Individual;
 import com.boa.customerapi.services.IndividualService;
 import com.boa.customerapi.vos.ResponseWrapper;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.github.bohnman.squiggly.Squiggly;
+import com.github.bohnman.squiggly.util.SquigglyUtils;
 
 @RestController
 @RequestMapping("/individuals")
@@ -119,4 +122,18 @@ public class IndividualController {
 					.body(new ResponseWrapper("Customer Not deleted"));	
 		
 	}
+	
+	
+	//http://localhost:7072/individuals/v1.0/filters?fields=customerId,name
+		@GetMapping({"/v1.0/filters"})
+	    public String getFilteredIndividual(@RequestParam(name = "fields", required = false) 
+	    String fields) 
+		{
+
+			List<Individual> customersList =this.individualService.getAllIndividuals();
+			ObjectMapper mapper = Squiggly.init(new ObjectMapper(), fields);  
+			return SquigglyUtils.stringify(mapper, customersList);
+			
+	    }
+
 }
