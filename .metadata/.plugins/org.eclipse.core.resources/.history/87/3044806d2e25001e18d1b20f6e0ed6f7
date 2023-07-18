@@ -32,7 +32,7 @@ companyType:CompanyType
 
 }
 
-extend type Mutation{
+type Mutation{
 
 addCorporate(corporateInput: CorporateInput):Corporate
 updateCorporate(contactNo: Long, email: String): Corporate
