@@ -66,12 +66,3 @@ middleName: String
 lastName: String
 
 }
-
-type Mutation{
-
-addIndividual(individualInput: IndividualInput):Individual
-updateIndividual(contactNo: Long, email: String): Individual
-deleteIndividual(contactNo: Long): Boolean
-
-}
-

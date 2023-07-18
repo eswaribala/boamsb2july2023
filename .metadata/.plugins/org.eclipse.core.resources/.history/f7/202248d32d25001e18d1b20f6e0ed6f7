@@ -51,7 +51,7 @@ findIndividualByContactNo(contactNo: Long): [Individual]
 input IndividualInput{
 
 customerId: Long!
-name: FullNameInput
+name: FullName
 contactNo: Long
 email: String
 password: String
@@ -66,12 +66,3 @@ middleName: String
 lastName: String
 
 }
-
-type Mutation{
-
-addIndividual(individualInput: IndividualInput):Individual
-updateIndividual(contactNo: Long, email: String): Individual
-deleteIndividual(contactNo: Long): Boolean
-
-}
-

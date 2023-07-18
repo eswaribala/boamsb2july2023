@@ -20,22 +20,3 @@ findCorporateByFirstName(firstName: String): [Corporate]
 findCorporateByContactNo(contactNo: Long): [Corporate]
 
 }
-
-
-input CorporateInput{
-customerId: Long!
-name: FullNameInput
-contactNo: Long
-email: String
-password: String
-companyType:CompanyType
-
-}
-
-type Mutation{
-
-addCorporate(corporateInput: CorporateInput):Corporate
-updateCorporate(contactNo: Long, email: String): Corporate
-deleteCorporate(contactNo: Long): Boolean
-
-}
