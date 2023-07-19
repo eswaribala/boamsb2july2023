@@ -3,6 +3,9 @@ package com.boa.customerapiext.controllers;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.boot.context.properties.ConfigurationProperties;
+import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -15,6 +18,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.boa.customerapiext.configurations.MessageConfiguration;
 import com.boa.customerapiext.models.Individual;
 import com.boa.customerapiext.services.IndividualService;
 import com.boa.customerapiext.vos.ResponseWrapper;
@@ -22,13 +26,23 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.github.bohnman.squiggly.Squiggly;
 import com.github.bohnman.squiggly.util.SquigglyUtils;
 
+import lombok.extern.slf4j.Slf4j;
+
 @RestController
 @RequestMapping("/individuals")
+//@RefreshScope
+@Slf4j
 public class IndividualController {
 
 	@Autowired
 	private IndividualService individualService;
 	
+	// @Value("${message}")
+	 //   private String message;
+	 
+	 @Autowired
+	    private MessageConfiguration messageConfiguration;
+	 
 	//add
 	@PostMapping({"/v1.0/"})
 	public ResponseEntity<ResponseWrapper> addIndividual(@RequestBody Individual individual){
@@ -49,6 +63,7 @@ public class IndividualController {
 	@GetMapping({"/v1.0/"})
 	public List<Individual> getAllIndividuals(){
 		
+		log.info("Message"+messageConfiguration.getMessage());
         return this.individualService.getAllIndividuals();
 
 	}
