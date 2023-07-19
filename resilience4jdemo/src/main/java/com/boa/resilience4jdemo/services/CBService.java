@@ -23,8 +23,7 @@ public class CBService {
 	
 	
 
-    @CircuitBreaker(name = "gatewayCircuitBreaker", 
-    		fallbackMethod = "fallbackResponse")
+    @CircuitBreaker(name = "gatewayCircuitBreaker", fallbackMethod = "fallbackResponse")
     @Retry(name = "gatewayRetry")
     public String fetchData() {
         log.info(" Making a request to " + serviceUrl + " at :" 
