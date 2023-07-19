@@ -1,13 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.PostMapping"/>
-    <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.GetMapping"/>
-    <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.PathVariable"/>
-    <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.PutMapping"/>
-    <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RequestParam"/>
-    <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.DeleteMapping"/>
-    <fullyQualifiedTypeName name="org.springframework.web.servlet.config.annotation.ContentNegotiationConfigurer"/>
-    <fullyQualifiedTypeName name="org.springframework.http.MediaType"/>
     <fullyQualifiedTypeName name="graphql.schema.GraphQLScalarType"/>
     <fullyQualifiedTypeName name="graphql.scalars.ExtendedScalars"/>
     <fullyQualifiedTypeName name="java.util.List"/>
@@ -15,7 +7,6 @@
     <fullyQualifiedTypeName name="com.github.bohnman.squiggly.Squiggly"/>
     <fullyQualifiedTypeName name="com.github.bohnman.squiggly.util.SquigglyUtils"/>
     <fullyQualifiedTypeName name="com.boa.customerapi.services.IndividualService"/>
-    <fullyQualifiedTypeName name="org.springframework.beans.factory.annotation.Autowired"/>
     <fullyQualifiedTypeName name="java.time.LocalDate"/>
     <fullyQualifiedTypeName name="com.boa.customerapi.models.Gender"/>
     <fullyQualifiedTypeName name="com.boa.customerapi.models.CompanyType"/>
@@ -46,10 +37,8 @@
     <fullyQualifiedTypeName name="org.springframework.http.server.ServerHttpRequest"/>
     <fullyQualifiedTypeName name="org.springframework.http.server.reactive.ServerHttpRequest"/>
     <fullyQualifiedTypeName name="org.springframework.stereotype.Component"/>
-    <fullyQualifiedTypeName name="lombok.extern.slf4j.Slf4j"/>
     <fullyQualifiedTypeName name="org.springframework.context.annotation.Configuration"/>
     <fullyQualifiedTypeName name="org.springframework.cache.annotation.EnableCaching"/>
-    <fullyQualifiedTypeName name="org.springframework.context.annotation.Bean"/>
     <fullyQualifiedTypeName name="org.springframework.cache.CacheManager"/>
     <fullyQualifiedTypeName name="org.springframework.cache.concurrent.ConcurrentMapCacheManager"/>
     <fullyQualifiedTypeName name="javax.persistence.Cacheable"/>
@@ -60,4 +49,15 @@
     <fullyQualifiedTypeName name="java.time.Duration"/>
     <fullyQualifiedTypeName name="org.springframework.data.redis.serializer.RedisSerializationContext.SerializationPair"/>
     <fullyQualifiedTypeName name="org.springframework.data.redis.serializer.GenericJackson2JsonRedisSerializer"/>
+    <fullyQualifiedTypeName name="org.springframework.context.annotation.Bean"/>
+    <fullyQualifiedTypeName name="org.springframework.stereotype.Service"/>
+    <fullyQualifiedTypeName name="org.springframework.web.client.RestTemplate"/>
+    <fullyQualifiedTypeName name="lombok.extern.slf4j.Slf4j"/>
+    <fullyQualifiedTypeName name="java.time.LocalDateTime"/>
+    <fullyQualifiedTypeName name="io.github.resilience4j.circuitbreaker.annotation.CircuitBreaker"/>
+    <fullyQualifiedTypeName name="io.github.resilience4j.retry.annotation.Retry"/>
+    <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RestController"/>
+    <fullyQualifiedTypeName name="com.boa.resilience4jdemo.services.CBService"/>
+    <fullyQualifiedTypeName name="org.springframework.beans.factory.annotation.Autowired"/>
+    <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.GetMapping"/>
 </qualifiedTypeNameHistroy>
