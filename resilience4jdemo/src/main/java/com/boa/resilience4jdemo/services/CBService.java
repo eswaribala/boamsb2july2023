@@ -24,7 +24,7 @@ public class CBService {
 	
 
     @CircuitBreaker(name = "gatewayCircuitBreaker", 
-    		fallbackMethod = "fallback")
+    		fallbackMethod = "fallbackResponse")
     @Retry(name = "gatewayRetry")
     public String fetchData() {
         log.info(" Making a request to " + serviceUrl + " at :" 
@@ -34,7 +34,7 @@ public class CBService {
         return restTemplate.getForObject(serviceUrl, String.class);
     }
 
-    public String fallback(String userName,String userPwd,Exception e) {
+    public String fallbackResponse(Exception e) {
          return restTemplate.getForObject(alternativeServiceUrl, String.class);
     }
 
