@@ -4,3 +4,4 @@ docker run --rm --cap-add=IPC_LOCK -e VAULT_ADDR=http://192.168.99.100:8200 -h 1
 docker run -it -p 8888:8888 -e SPRING_CLOUD_CONFIG_SERVER_GIT_DEFAULT-LABEL=master -e SPRING_CLOUD_CONFIG_SERVER_GIT_URI=https://github.com/eswaribala/boamstrainingrepo.git  springcloud/configserver
 
 docker run --publish 8761:8761 steeltoeoss/eureka-server
+docker run -it --name boa-redis -p 6379:6379 -d redis
