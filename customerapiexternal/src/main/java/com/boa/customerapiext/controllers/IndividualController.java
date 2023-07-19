@@ -5,6 +5,9 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.context.properties.ConfigurationProperties;
+import org.springframework.cache.annotation.CacheEvict;
+import org.springframework.cache.annotation.CachePut;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -61,6 +64,7 @@ public class IndividualController {
 	
 	
 	@GetMapping({"/v1.0/"})
+	@Cacheable("customers")
 	public List<Individual> getAllIndividuals(){
 		
 		log.info("Message"+messageConfiguration.getMessage());
@@ -111,6 +115,7 @@ public class IndividualController {
 	}
 	
 	@PutMapping({"/v1.0/{customerId}"})
+	@CachePut(cacheNames = "customers", key = "#customer.id")
 	public ResponseEntity<ResponseWrapper> updateIndividual
 	(@PathVariable("customerId") long customerId, @RequestParam("email") String email){
 		
@@ -126,6 +131,7 @@ public class IndividualController {
 		
 	}
 	@DeleteMapping({"/v1.0/{customerId}"})
+	@CacheEvict(cacheNames = "customers", key = "#customer.id")
 	public ResponseEntity<ResponseWrapper> deleteIndividual	(@PathVariable("customerId") long customerId){
 				
 		if(this.individualService.deleteIndividual(customerId))

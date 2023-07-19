@@ -1,5 +1,5 @@
 package com.boa.cloudgateway.configurations;
-
+/*
 import org.springframework.cloud.gateway.filter.GlobalFilter;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -22,3 +22,4 @@ public class LoggingGlobalFiltersConfigurations {
         };
     }
 }
+*/
