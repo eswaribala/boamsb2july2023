@@ -35,7 +35,7 @@ check dockerfile
 docker build -f ./Dockerfile -t invapp .
 
 #docker compose scale
-docker-compose scale customer-app=3
+docker-compose up --scale customer-app=3
 
 Data Volume
 Method 1
