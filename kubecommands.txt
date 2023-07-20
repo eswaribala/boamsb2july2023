@@ -39,7 +39,7 @@ kubeadm join 172.20.0.189:6443 --token p24y53.979ymgbqf7uw0pzy --discovery-token
 kubectl version
 kubectl cluster-info
 kubectl cluster-info dump
-
+kubectl api-resources
 #create kube cluster
 Step 1
 docker-desktop multi node cluster
