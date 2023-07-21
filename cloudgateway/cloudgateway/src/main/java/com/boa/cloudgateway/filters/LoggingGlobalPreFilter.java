@@ -83,7 +83,7 @@ public class LoggingGlobalPreFilter implements GlobalFilter,Ordered {
              //Redirect to JWT token
              JwtRequest jwtRequest=new JwtRequest();
              jwtRequest.setUserName("eswaribala");
-             jwtRequest.setUserPwd("Test@123");
+             jwtRequest.setUserPwd("Test@1234");
 
              //step 2
 

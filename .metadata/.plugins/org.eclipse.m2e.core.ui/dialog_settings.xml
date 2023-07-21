@@ -2,6 +2,8 @@
 <section name="Workbench">
 	<section name="MavenProjectImportWizardPage">
 		<list key="rootDirectory">
+			<item value="I:\boamsb2jul2023\jwtsecurity\jwtsecurity"/>
+			<item value="I:\boamsb2jul2023\spring-boot-cqrs-example-master"/>
 			<item value="I:\boamsb2jul2023\customerapidocker\customerapidocker"/>
 			<item value="I:\boamsb2jul2023\resilience4jdemo"/>
 			<item value="I:\boamsb2jul2023\cloudgateway\cloudgateway"/>
