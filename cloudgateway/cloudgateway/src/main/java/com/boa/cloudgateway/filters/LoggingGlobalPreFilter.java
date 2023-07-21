@@ -6,6 +6,9 @@ import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
 
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.cloud.gateway.filter.GatewayFilterChain;
@@ -33,6 +36,7 @@ import net.minidev.json.JSONObject;
 import net.minidev.json.parser.JSONParser;
 import reactor.core.publisher.Mono;
 
+
 @Component
 @Slf4j
 public class LoggingGlobalPreFilter implements GlobalFilter,Ordered {
@@ -56,8 +60,8 @@ public class LoggingGlobalPreFilter implements GlobalFilter,Ordered {
         
      // TODO Auto-generated method stub
      		//Step: 1
-
-             RequestContext ctx = RequestContext.getCurrentContext();
+        RequestContext ctx = RequestContext.getCurrentContext();
+             
              HttpServletRequest servletRequest = ctx.getRequest();
              System.out.println("Entering pre filter........");
              System.out.println( servletRequest.getRemoteAddr());

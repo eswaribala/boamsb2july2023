@@ -25,3 +25,8 @@ management:
        web:
         exposure:
            include: "*"  
+           
+apiUrl:
+   http://localhost:9091/
+api:
+    tests/v1.0/admin/
