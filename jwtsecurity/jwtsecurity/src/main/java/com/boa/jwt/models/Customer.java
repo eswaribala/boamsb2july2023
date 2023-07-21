@@ -1,4 +1,4 @@
-package com.boa.customerapi.models;
+package com.boa.jwt.models;
 
 import javax.annotation.Generated;
 import javax.persistence.Column;

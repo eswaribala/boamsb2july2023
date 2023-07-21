@@ -1,10 +1,10 @@
-package com.boa.customerapi.vos;
+package com.boa.jwt.vos;
 
 
 
 import java.time.LocalDate;
 
-import com.boa.customerapi.models.Gender;
+import com.boa.jwt.models.Gender;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

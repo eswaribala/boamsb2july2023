@@ -1,4 +1,4 @@
-package com.boa.customerapi.configurations;
+package com.boa.jwt.configurations;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.MediaType;

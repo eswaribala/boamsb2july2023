@@ -1,8 +1,8 @@
-package com.boa.customerapi.repositories;
+package com.boa.jwt.repositories;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
-import com.boa.customerapi.models.Address;
+import com.boa.jwt.models.Address;
 
 public interface AddressRepo extends JpaRepository<Address,Long>{
 

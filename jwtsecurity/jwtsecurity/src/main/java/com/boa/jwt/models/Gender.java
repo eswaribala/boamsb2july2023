@@ -1,4 +1,4 @@
-package com.boa.customerapi.models;
+package com.boa.jwt.models;
 
 public enum Gender {
 MALE,FEMALE,TRANSGENDER

@@ -1,4 +1,4 @@
-package com.boa.customerapi.services;
+package com.boa.jwt.services;
 
 import java.util.List;
 
@@ -12,8 +12,8 @@ import javax.persistence.criteria.Root;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.boa.customerapi.models.Corporate;
-import com.boa.customerapi.repositories.CorporateRepo;
+import com.boa.jwt.models.Corporate;
+import com.boa.jwt.repositories.CorporateRepo;
 
 @Service
 public class CorporateService {

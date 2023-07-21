@@ -1,8 +1,8 @@
-package com.boa.customerapi.vos;
+package com.boa.jwt.vos;
 
 
 
-import com.boa.customerapi.models.CompanyType;
+import com.boa.jwt.models.CompanyType;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

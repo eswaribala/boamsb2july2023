@@ -1,4 +1,4 @@
-package com.boa.customerapi.repositories;
+package com.boa.jwt.repositories;
 
 import java.util.List;
 
@@ -6,7 +6,7 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 
-import com.boa.customerapi.models.Corporate;
+import com.boa.jwt.models.Corporate;
 
 
 public interface CorporateRepo extends JpaRepository<Corporate,Long>{

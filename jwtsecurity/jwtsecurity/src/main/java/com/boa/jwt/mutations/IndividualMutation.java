@@ -1,12 +1,12 @@
-package com.boa.customerapi.mutations;
+package com.boa.jwt.mutations;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-import com.boa.customerapi.models.FullName;
-import com.boa.customerapi.models.Individual;
-import com.boa.customerapi.services.IndividualService;
-import com.boa.customerapi.vos.IndividualInput;
+import com.boa.jwt.models.FullName;
+import com.boa.jwt.models.Individual;
+import com.boa.jwt.services.IndividualService;
+import com.boa.jwt.vos.IndividualInput;
 
 import graphql.kickstart.tools.GraphQLMutationResolver;
 

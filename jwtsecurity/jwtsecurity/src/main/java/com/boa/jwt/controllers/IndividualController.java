@@ -1,4 +1,4 @@
-package com.boa.customerapi.controllers;
+package com.boa.jwt.controllers;
 
 import java.util.List;
 
@@ -15,9 +15,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.boa.customerapi.models.Individual;
-import com.boa.customerapi.services.IndividualService;
-import com.boa.customerapi.vos.ResponseWrapper;
+import com.boa.jwt.models.Individual;
+import com.boa.jwt.services.IndividualService;
+import com.boa.jwt.vos.ResponseWrapper;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.github.bohnman.squiggly.Squiggly;
 import com.github.bohnman.squiggly.util.SquigglyUtils;

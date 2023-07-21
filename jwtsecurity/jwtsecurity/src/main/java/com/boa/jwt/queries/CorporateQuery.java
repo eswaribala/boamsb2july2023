@@ -1,12 +1,12 @@
-package com.boa.customerapi.queries;
+package com.boa.jwt.queries;
 
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-import com.boa.customerapi.models.Corporate;
-import com.boa.customerapi.services.CorporateService;
+import com.boa.jwt.models.Corporate;
+import com.boa.jwt.services.CorporateService;
 
 import graphql.kickstart.tools.GraphQLQueryResolver;
 

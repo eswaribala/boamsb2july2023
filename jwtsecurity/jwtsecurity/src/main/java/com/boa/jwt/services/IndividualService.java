@@ -1,4 +1,4 @@
-package com.boa.customerapi.services;
+package com.boa.jwt.services;
 
 import java.util.List;
 
@@ -12,8 +12,8 @@ import javax.persistence.criteria.Root;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.boa.customerapi.models.Individual;
-import com.boa.customerapi.repositories.IndividualRepo;
+import com.boa.jwt.models.Individual;
+import com.boa.jwt.repositories.IndividualRepo;
 
 @Service
 public class IndividualService {

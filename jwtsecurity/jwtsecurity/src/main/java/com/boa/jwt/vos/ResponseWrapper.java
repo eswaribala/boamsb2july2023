@@ -1,4 +1,4 @@
-package com.boa.customerapi.vos;
+package com.boa.jwt.vos;
 
 import lombok.Data;
 
