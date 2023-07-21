@@ -1,4 +1,4 @@
-docker run --rm --cap-add=IPC_LOCK -e VAULT_ADDR=http://192.168.99.100:8200 -h 192.168.99.100 -p 8200:8200 -d --name=dev-vault vault:1.2.2  
+docker run --rm --cap-add=IPC_LOCK -e VAULT_ADDR=http://localhost:8200 -p 8200:8200 -d --name=dev-vault vault:1.2.2  
 
 
 docker run -it -p 8888:8888 -e SPRING_CLOUD_CONFIG_SERVER_GIT_DEFAULT-LABEL=master -e SPRING_CLOUD_CONFIG_SERVER_GIT_URI=https://github.com/eswaribala/boamstrainingrepo.git  springcloud/configserver
