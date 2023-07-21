@@ -136,4 +136,18 @@ public class IndividualController {
 			
 	    }
 
+		
+		@GetMapping({"/v1.0/publish/{customerId}"})
+		public ResponseEntity<ResponseWrapper> publishData(@PathVariable("customerId") long customerId){
+			
+	        
+	        if(this.individualService.publishData(customerId))
+				return ResponseEntity.status(HttpStatus.ACCEPTED)
+						.body(new ResponseWrapper<Individual>("Published"));
+			else
+				
+				return ResponseEntity.status(HttpStatus.BAD_REQUEST)
+						.body(new ResponseWrapper("Not Published"));
+
+		}
 }

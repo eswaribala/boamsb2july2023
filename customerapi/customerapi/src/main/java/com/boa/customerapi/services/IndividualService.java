@@ -10,8 +10,13 @@ import javax.persistence.criteria.CriteriaQuery;
 import javax.persistence.criteria.Root;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.messaging.MessageChannel;
+import org.springframework.messaging.MessageHeaders;
+import org.springframework.messaging.support.MessageBuilder;
 import org.springframework.stereotype.Service;
+import org.springframework.util.MimeTypeUtils;
 
+import com.boa.customerapi.facades.CustomerFacade;
 import com.boa.customerapi.models.Individual;
 import com.boa.customerapi.repositories.IndividualRepo;
 
@@ -19,6 +24,9 @@ import com.boa.customerapi.repositories.IndividualRepo;
 public class IndividualService {
 	@Autowired
 	private IndividualRepo individualRepo;
+	
+	@Autowired
+	private CustomerFacade customerFacade;
 	
 	@Autowired
 	private EntityManager entityManager;
@@ -96,6 +104,19 @@ public class IndividualService {
 		else
 			return status;
 		
+		
+		
+	}
+	
+	
+	public boolean publishData(long customerId) {
+		
+		Individual individual=this.getIndividualById(customerId);
+		MessageChannel msgChannel=customerFacade.outChannel();
+		return msgChannel.send(MessageBuilder .withPayload(individual)
+				 .setHeader(MessageHeaders.CONTENT_TYPE, MimeTypeUtils.APPLICATION_JSON)
+				 .build());
+
 		
 		
 	}
