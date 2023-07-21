@@ -29,6 +29,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.github.wnameless.json.flattener.JsonFlattener;
 import com.github.wnameless.json.unflattener.JsonUnflattener;
 
+import io.netty.handler.codec.http.HttpResponse;
 import lombok.extern.slf4j.Slf4j;
 import net.minidev.json.JSONObject;
 import net.minidev.json.parser.JSONParser;
@@ -129,7 +130,11 @@ public class LoggingGlobalPreFilter implements GlobalFilter,Ordered {
 
 
 
-
+                 return chain.filter(exchange).then(Mono.fromRunnable(()->{
+                     var response = exchange.getResponse();
+                     response.setRawStatusCode(201);
+                     exchange.mutate().response(response).build();
+                 }));
              }
              catch(Exception exception)
              {
@@ -137,15 +142,17 @@ public class LoggingGlobalPreFilter implements GlobalFilter,Ordered {
                  //Do not route requests
                  //ctx.setSendZuulResponse(false);
                  //responseError(ctx, -403, "invalid token");
+                 return chain.filter(exchange).then(Mono.fromRunnable(()->{
+                	 var response = exchange.getResponse();
+                     response.setRawStatusCode(401);
+                     response.setComplete();
+                     exchange.mutate().response(response).build();
+                 }));
              }
 
+           
         
         
-        return chain.filter(exchange).then(Mono.fromRunnable(()->{
-            var response = exchange.getResponse();
-            response.setRawStatusCode(201);
-            exchange.mutate().response(response).build();
-        }));
     }
     @Override
     public int getOrder() {
